@@ -14,8 +14,9 @@
     </div>
 
 
+    <!-- Top info Section -->
     <div class="Container">
-        <div class="Container-column">
+        <div class="Container-column" style="padding-right: 40px;">
             <h2 class="Container-title">
                 Expert Engineering Solutions for Design and Construction
             </h2>
@@ -24,12 +25,113 @@
                 <br><br>
                 Trust our experienced professionals to deliver precise insights and effective solutions for your business challenges.
             </span>
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+                <a class="Button" href="tel:5164573738">
+                    <span class="Button-text">Call Now</span>
+                </a>
+                <a class="Button" href="#contact-form">
+                    <span class="Button-text">Contact Us</span>
+                </a>
+            </div>
         </div>
         <!-- TODO: get image -->
         <div class="Container-column">
             <img src="images/HardHat.webp" alt="Hard hat on top of construction blueprints">
         </div>
     </div>
+
+    <!-- Brian TerBush Info Section -->
+     <div class="Container">
+        <div class="Container-column">
+            <!-- TODO: add picture of Brian -->
+            <img src="images/HardHat.webp" alt="Hard hat on top of construction blueprints">
+        </div>
+        <div class="Container-column">
+            <span class="Container-title">
+                Brian TerBush, PE
+            </span>
+            <span class="Container-body">
+                Brian has over 35 years of engineering and construction management experience, including work in both residential and commercial sectors. He has served as an expert witness in local and state courts and operates as a Class 2 Special Inspection Agency with the New York City DOB.
+            </span>
+            <span class="Container-body">
+                <a href="https://eservices.nysed.gov/professions/verification-search?licenseNumber=094621&professionCode=016" target="_blank" rel="noopener noreferrer">
+                    NYS PE License #094621
+                </a>
+            </span>
+        </div>
+     </div>
+
+     <!-- Our Services Section -->
+      <div class="Container">
+        <div class="Container-column">
+            <span class="Container-title">
+                Our Services
+            </span>
+            <div class="Container">
+                <div class="Container-column">
+                    <span>Drawing Review and Approval</span>
+                    <span>Construction Inspections</span>
+                    <span>Special Inspections</span>
+                </div>
+                <div class="Container-column">
+                    <span>Construction Management</span>
+                    <span>Expert Witness</span>
+                    <span>Structural Evaluations</span>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="Container" id="contact-form">
+        <div class="Container-column">
+          <h2 class="Container-title">Contact Us</h2>
+          <span class="Container-body">
+            Get in touch with us for your engineering consulting needs. We'll respond to your inquiry as soon as possible.
+          </span>
+        </div>
+        <div class="Container-column">
+          <form id="contactForm" class="ContactForm">
+            <div class="FormRow">
+              <div class="FormGroup">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="FormGroup">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            
+            <div class="FormGroup">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+            
+            <div class="FormGroup">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="FormGroup">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="FormGroup">
+              <label for="services">Services Needed *</label>
+              <input type="text" id="services" name="services" required placeholder="e.g., Drawing Review, Construction Inspections, etc.">
+            </div>
+            
+            <div class="FormGroup">
+              <label for="additionalInfo">Additional Information</label>
+              <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Tell us more about your project..."></textarea>
+            </div>
+            
+            <button type="submit" class="Button">Send Message</button>
+          </form>
+        </div>
+      </div>
 
     <script src="index.js"></script> 
 </body>

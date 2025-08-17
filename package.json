@@ -7,10 +7,12 @@
     "build:css": "sass src/styles.scss styles.css",
     "watch:css": "sass --watch src/styles.scss styles.css",
     "dev": "sass --watch src/styles.scss styles.css & python3 -m http.server 8000",
+    "dev:win": "start sass --watch src/styles.scss styles.css && python -m http.server 8000",
     "build": "sass src/styles.scss styles.css --style compressed"
   },
   "devDependencies": {
-    "sass": "^1.69.0"
+    "sass": "^1.69.0",
+    "concurrently": "^8.2.2"
   },
   "keywords": ["engineering", "services", "website"],
   "author": "TerBush Engineering Services, PLLC",

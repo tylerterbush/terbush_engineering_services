@@ -39,11 +39,12 @@ body {
   border: none;
   padding: 12px 24px;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 2rem auto;
   display: block;
+  text-decoration: none;
 }
 .Button:hover {
   background-color: rgb(50.4261363636, 60.3693181818, 74.5738636364);
@@ -126,6 +127,13 @@ body {
 .FormGroup select {
   background-color: white;
   cursor: pointer;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
 }
 
 /*# sourceMappingURL=styles.css.map */

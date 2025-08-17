@@ -171,11 +171,22 @@ p {
     padding: 3rem 1.5rem;
     gap: 2rem;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .Container#contact-form {
+    padding: 2rem 1rem;
+  }
+  .Container#contact-form .Container-column:last-child {
+    width: 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 480px) {
   .Container {
     padding: 2rem 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 }
 .Container-column {
@@ -183,6 +194,12 @@ p {
   flex-direction: column;
   flex: 1;
   min-width: 0;
+}
+@media (max-width: 768px) {
+  .Container-column {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .Container-title {
   font-size: 2.5rem;
@@ -327,6 +344,9 @@ p {
 @media (max-width: 768px) {
   .ContactForm {
     padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
@@ -339,12 +359,20 @@ p {
   .FormRow {
     flex-direction: column;
     gap: 0;
+    width: 100%;
   }
 }
 
 .FormGroup {
   margin-bottom: 1.5rem;
   flex: 1;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .FormGroup {
+    width: 100%;
+    flex: none;
+  }
 }
 .FormGroup label {
   display: block;

@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TerBush Engineering Services, PLLC</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="Header">
         <h1>TerBush Engineering Services, PLLC</h1>
+        <div class="subtitle">Professional Engineering Excellence Since 1988</div>
     </div>
 
-
-    <!-- Top info Section -->
-    <div class="Container">
-        <div class="Container-column" style="padding-right: 40px;">
+    <!-- Hero Section -->
+    <div class="Container hero">
+        <div class="Container-column hero-content">
             <h2 class="Container-title">
                 Expert Engineering Solutions for Design and Construction
             </h2>
@@ -25,17 +28,16 @@
                 <br><br>
                 Trust our experienced professionals to deliver precise insights and effective solutions for your business challenges.
             </span>
-            <div style="display: flex; flex-direction: row; gap: 10px;">
+            <div style="display: flex; flex-direction: row; gap: 1rem; flex-wrap: wrap;">
                 <a class="Button" href="tel:5164573738">
                     <span class="Button-text">Call Now</span>
                 </a>
-                <a class="Button" href="#contact-form">
+                <a class="Button secondary" href="#contact-form">
                     <span class="Button-text">Contact Us</span>
                 </a>
             </div>
         </div>
-        <!-- TODO: get image -->
-        <div class="Container-column">
+        <div class="Container-column hero-image">
             <img src="images/HardHat.webp" alt="Hard hat on top of construction blueprints">
         </div>
     </div>
@@ -43,17 +45,15 @@
     <!-- Brian TerBush Info Section -->
      <div class="Container">
         <div class="Container-column">
-            <!-- TODO: add picture of Brian -->
-            <img src="images/Headshot.webp" alt="Hard hat on top of construction blueprints">
+            <img src="images/Headshot.webp" alt="Brian TerBush, Professional Engineer">
         </div>
         <div class="Container-column">
-            <span class="Container-title">
+            <h2 class="Container-title">
                 Brian TerBush, PE
-            </span>
+            </h2>
             <span class="Container-body">
-                Brian has over 35 years of engineering and construction management experience, including work in both residential and commercial sectors. He has served as an expert witness in local and state courts and operates as a Class 2 Special Inspection Agency with the New York City DOB.
+                Brian has over <strong>35 years</strong> of engineering and construction management experience, including work in both residential and commercial sectors. He has served as an expert witness in local and state courts and operates as a Class 2 Special Inspection Agency with the New York City DOB.
             </span>
-            <br>
             <span class="Container-body">
                 <a href="https://eservices.nysed.gov/professions/verification-search?licenseNumber=094621&professionCode=016" target="_blank" rel="noopener noreferrer">
                     NYS PE License #094621
@@ -63,22 +63,37 @@
      </div>
 
      <!-- Our Services Section -->
-      <div class="Container">
-        <div class="Container-column">
-            <span class="Container-title">
-                Our Services
-            </span>
-            <div class="Container">
-                <div class="Container-column">
-                    <span>Drawing Review and Approval</span>
-                    <span>Construction Inspections</span>
-                    <span>Special Inspections</span>
-                </div>
-                <div class="Container-column">
-                    <span>Construction Management</span>
-                    <span>Expert Witness</span>
-                    <span>Structural Evaluations</span>
-                </div>
+      <div class="Container services">
+        <h2 class="Container-title">
+            Our Services
+        </h2>
+        <span class="Container-body">
+            We provide comprehensive engineering services to ensure your projects meet the highest standards of safety, quality, and compliance.
+        </span>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Drawing Review & Approval</h3>
+                <p>Comprehensive review of construction drawings to ensure compliance with building codes and engineering standards.</p>
+            </div>
+            <div class="service-card">
+                <h3>Construction Inspections</h3>
+                <p>Regular on-site inspections to verify construction quality and adherence to approved plans and specifications.</p>
+            </div>
+            <div class="service-card">
+                <h3>Special Inspections</h3>
+                <p>Specialized inspections for critical structural elements as required by building codes and project specifications.</p>
+            </div>
+            <div class="service-card">
+                <h3>Construction Management</h3>
+                <p>Professional oversight of construction projects to ensure timely completion within budget and quality standards.</p>
+            </div>
+            <div class="service-card">
+                <h3>Expert Witness</h3>
+                <p>Professional testimony and expert analysis for legal proceedings related to construction and engineering matters.</p>
+            </div>
+            <div class="service-card">
+                <h3>Structural Evaluations</h3>
+                <p>Comprehensive assessment of existing structures to determine condition, safety, and necessary improvements.</p>
             </div>
         </div>
       </div>
@@ -139,15 +154,14 @@
       <span class="Footer-businessName">
         TerBush Engineering Services, PLLC
       </span>
-      <br>
-      <span>
-        Contact Us
-      </span>
-      <span>
-        <a href="mailto:bterbush@gmail.com">bterbush@gmail.com</a>
-        <sp/>|<sp/>
-        <a href="tel:5164573738">(516) 457-3738</a>
-      </span>
+      <div class="contact-info">
+        <span>Contact Us</span>
+        <span>
+          <a href="mailto:bterbush@gmail.com">bterbush@gmail.com</a>
+          <span>|</span>
+          <a href="tel:5164573738">(516) 457-3738</a>
+        </span>
+      </div>
     </div>
 
     <script src="index.js"></script> 

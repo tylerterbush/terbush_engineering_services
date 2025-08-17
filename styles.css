@@ -6,62 +6,177 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #1e293b;
-  background-color: #f1f5f9;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.7;
+  color: #1f2937;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
 }
 
 .Header {
-  background: linear-gradient(135deg, #1e40af, #475569);
-  color: white;
-  padding: 2rem 0;
+  background: linear-gradient(135deg, #1e40af 0%, #60a5fa 100%);
+  color: #ffffff;
+  padding: 3rem 0;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.Header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
 }
 .Header h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 768px) {
   .Header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+}
+.Header .subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .Header .subtitle {
+    font-size: 1.1rem;
   }
 }
 
 .Button {
-  background-color: #475569;
-  color: white;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
   border: none;
-  padding: 12px 24px;
+  padding: 1rem 2rem;
   font-size: 1rem;
-  border-radius: 20px;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 2rem auto;
-  display: block;
   text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.Button-text {
+  position: relative;
+  z-index: 1;
+}
+.Button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+.Button:hover::before {
+  left: 100%;
 }
 .Button:hover {
-  background-color: rgb(50.4261363636, 60.3693181818, 74.5738636364);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(71, 85, 105, 0.4);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.35);
 }
 .Button:active {
   transform: translateY(0);
 }
+.Button.secondary {
+  background: transparent;
+  color: #1e40af;
+  border: 2px solid #1e40af;
+  box-shadow: none;
+}
+.Button.secondary:hover {
+  background: #1e40af;
+  color: #ffffff;
+}
 
 .Container {
   margin: 0 auto;
-  padding: 40px 40px;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 4rem;
   max-width: 1200px;
+  align-items: center;
+  position: relative;
+}
+.Container:nth-child(even) {
+  background-color: #f8fafc;
+}
+.Container.hero {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+.Container.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(30,64,175,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.5;
+}
+.Container.services {
+  flex-direction: column;
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+.Container.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(30,64,175,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+  opacity: 0.3;
+}
+@media (max-width: 768px) {
+  .Container {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .Container {
+    padding: 2rem 1rem;
+  }
 }
 .Container-column {
   display: flex;
@@ -70,21 +185,155 @@ body {
   min-width: 0;
 }
 .Container-title {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  position: relative;
+}
+.Container-title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+@media (max-width: 480px) {
+  .Container-title {
+    font-size: 2rem;
+  }
+}
+.Container:hover .Container-title::after {
+  width: 80px;
+}
+.Container.services .Container-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .Container.services .Container-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.Container.services:hover .Container-title::after {
+  width: 100px;
 }
 .Container-body {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-image {
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.hero-image img:hover {
+  transform: translateY(-5px);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.service-card:hover {
+  border-color: #1e40af;
+}
+.service-card h3 {
+  color: #1e40af;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.service-card p {
+  color: #64748b;
+  margin-bottom: 0;
+  line-height: 1.6;
 }
 
 .ContactForm {
   width: 100%;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+.ContactForm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+.ContactForm h2 {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+@media (max-width: 768px) {
+  .ContactForm {
+    padding: 1.5rem;
+  }
 }
 
 .FormRow {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 @media (max-width: 768px) {
   .FormRow {
@@ -94,46 +343,130 @@ body {
 }
 
 .FormGroup {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   flex: 1;
 }
 .FormGroup label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
-  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .FormGroup input, .FormGroup select, .FormGroup textarea {
   width: 100%;
-  padding: 12px;
-  border: 2px solid #e2e8f0;
-  border-radius: 6px;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
 }
 .FormGroup input:focus, .FormGroup select:focus, .FormGroup textarea:focus {
   outline: none;
   border-color: #1e40af;
+  background-color: #ffffff;
   box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
 }
+.FormGroup input:hover, .FormGroup select:hover, .FormGroup textarea:hover {
+  border-color: #d1d5db;
+  background-color: #ffffff;
+}
 .FormGroup input:invalid, .FormGroup select:invalid, .FormGroup textarea:invalid {
-  border-color: #0f172a;
+  border-color: #ef4444;
+}
+.FormGroup input:valid, .FormGroup select:valid, .FormGroup textarea:valid {
+  border-color: #10b981;
 }
 .FormGroup textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
 }
 .FormGroup select {
-  background-color: white;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
 .Footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 40px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+.Footer-businessName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+.Footer a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.Footer a:hover {
+  color: #93c5fd;
+}
+.Footer .contact-info {
+  margin-top: 1rem;
+  color: #cbd5e1;
+}
+.Footer .contact-info span {
+  margin: 0 0.5rem;
+}
+
+.Container + .Container {
+  margin-top: 0;
+}
+
+.Container.hero + .Container {
+  margin-top: 0;
+  background-color: #f8fafc;
+}
+
+.Container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.Container img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.Container-body strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+.Container-body a {
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.Container-body a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.Container {
+  animation: fadeInUp 0.6s ease-out;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -35,6 +35,12 @@ p {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .Header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 .Header::before {
   content: "";
   position: absolute;

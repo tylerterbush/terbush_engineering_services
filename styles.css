@@ -30,16 +30,10 @@ p {
 .Header {
   background: linear-gradient(135deg, #1e40af 0%, #60a5fa 100%);
   color: #ffffff;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-}
-@media (max-width: 768px) {
-  .Header {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
 }
 .Header::before {
   content: "";
